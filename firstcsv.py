@@ -24,8 +24,4 @@ with open("file.csv", "w", newline="") as file:
     writer = csv.writer(file)
     writer.writerows(listof)
     
-
-
-
-
 print(listof)
