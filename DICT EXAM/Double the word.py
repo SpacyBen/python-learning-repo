@@ -1,17 +1,10 @@
 def DOUBLE(word):
     result = ""
-    dict_chars = {}
     for char in word:
-        if char in dict_chars:
-            dict_chars[char] += 1
+        if word.count(char) == 1:
+            result += char * 2   # appears once → double
         else:
-            dict_chars[char] = 1
-        
-    for char in word:
-            if dict_chars[char] != 2:
-                result += char * 2
-            else:
-                result += char
+            result += char       # appears more than once → single
     print(result)
 
 word = "Kamusta"
