@@ -24,6 +24,8 @@ def data2(a2):
             occure[w] = occure.get(w,0) + 1
     return occure
 
+
+
 word = ["banana","saging","banana","apple"]
 dupe, occ = data1(word)
 print(occ)
