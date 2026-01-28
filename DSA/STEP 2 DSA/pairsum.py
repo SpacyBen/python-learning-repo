@@ -7,33 +7,25 @@ def pair1(arr,target):
             r -= 1
 
 def pair2(arr, target):
-    for i in range(len(arr)):
-        print(i)
-        adds = []
-        adds.append(arr[i])
-        while sum(adds) != target:
-            for j in range(len(arr)):
-                if arr[j] in adds:
-                    continue
-                if sum(adds) == target:
-                    print(adds)
-                    print("----")
-                    adds = []
-                    break
-                else:
-                    adds.append(arr[j])
-                    print(adds)
-    
-                
+    n = len(arr)
+    for i in range(n):
+        for j in range(i + 1, n):
+            for f in range(j + 1, n):
+                if arr[i] + arr[j] + arr[f] == target:
+                    print(f"{arr[i]} + {arr[j]} + {arr[f]} = {target}")
 
-
-
-        
-        
-
+def pair3(arr,target):
+    n = len(arr)
+    for i in range(n):
+        for j in range(i + 1, n):
+            for f in range(j + 1,n):
+                for g in range(f + 1, n):
+                    if arr[i] + arr[j] +arr[f] +arr[g] == target:
+                        print(f"{arr[i]} + {arr[j]} + {arr[f]} + {arr[g]} = {target}")
 
 
 arr = [1,2,3,4,5,6,7,8,9]
 target = 10
 pair1(arr,target)
 pair2(arr,target)
+pair3(arr,target)
