@@ -34,7 +34,4 @@ word = input("Enter Word: ")
 pal(word)
 pal2(word)
 pal3(word)
-print("List Palindrome checker")
-list2 = input("Enter Numbers or letters seperate with space: ")
-tolist = list2.split()
-print(tolist)
+
