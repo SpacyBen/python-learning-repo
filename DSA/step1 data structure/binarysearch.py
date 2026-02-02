@@ -1,4 +1,6 @@
 def bin(sort1,target):
+    if not sort1:
+        return print("empty")
     first = 0
     last = len(sort1)-1
     mid = int(first + last//2)
