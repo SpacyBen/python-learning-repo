@@ -24,16 +24,41 @@ def range1(prefsums,s,e):
         return prefsums[e] - prefsums[s-1]
     else:
         return prefsums[e]
+    
+
+
+def subcount2(arr,k):
+    freq = {0:1}
+    curr = 0
+    count = 0
+    for num in arr:
+        curr += num
+        if curr - k in freq:
+            count += freq[curr - k]
+        freq[curr] = freq.get(curr,0) + 1
+    
+    return count
+
+
 
 
 
 
 if __name__ == "__main__":
-    arr = [10, 20, 10, 5, 15]
+    #array
+    arr = [1, 2, 3, 2, 5]
+    k = 5
+    #all prefixsum in addition.
     prefsums = prefsum(arr)
     print(range1(prefsums,2,4))
+    #queries can be used for user input ranges
     queries = [(0, 2), (1, 3), (2, 4), (3, 4)]
     for s,e in queries:
         print(range1(prefsums,s,e))
     print(prefsums)
     print(pref2(arr))
+    print("=======")
+    subar, ct = subcount(arr,k)
+    print(f"Count: {ct}, Subarray: {subar}")
+    print("=======")
+    print(subcount2(arr,k))
