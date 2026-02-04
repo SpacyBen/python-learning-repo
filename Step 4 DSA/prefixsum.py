@@ -58,7 +58,5 @@ if __name__ == "__main__":
     print(prefsums)
     print(pref2(arr))
     print("=======")
-    subar, ct = subcount(arr,k)
-    print(f"Count: {ct}, Subarray: {subar}")
-    print("=======")
+
     print(subcount2(arr,k))
