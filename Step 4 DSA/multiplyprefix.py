@@ -22,11 +22,6 @@ def pref1(arr):
         output.append(left[i] * right[i])
     return left,right,output
 
-def pref2(arr):
-    output = []
-    for i in range(len(arr)):
-        print(i)
-        
 
 
 arr = [1,2,3,4,5]
