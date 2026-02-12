@@ -2,9 +2,9 @@ def maxsimum1(arr,k):
     n = len(arr)
     output = [0] * n
     l,r = 0,1
-    currentsum = 0
+ 
     maxsum = 0
-    valmax = []
+
     while l < n:
         output[l] = arr[l]
         output[r] = output[r-1] + arr[r]
